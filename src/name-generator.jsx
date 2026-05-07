@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 // FREE tier limits
+const ANTHROPIC_KEY = "sk-ant-api03-a4xBGRyU3HWDCC-qcHPQ-gbd5xUAC3sr0cWpFUe06d1bAYGUP5NpUgiU3Ri1PCSwtBFM5PZseiGX29j5_aVhnQ-PGOE7AAA";
 const FREE_DAILY_LIMIT = 3;
 const FREE_MAX_NAMES = 6;
 const PREMIUM_ANIMALS = ["🐠", "🐴"];
