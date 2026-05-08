@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-// Replace PASTE_YOUR_KEY_HERE with your Anthropic API key
-const ANTHROPIC_KEY = "sk-ant-api03-a4xBGRyU3HWDCC-qcHPQ-gbd5xUAC3sr0cWpFUe06d1bAYGUP5NpUgiU3Ri1PCSwtBFM5PZseiGX29j5_aVhnQ-PGOE7AAA";
 
 // FREE tier limits
 const FREE_DAILY_LIMIT = 3;
@@ -183,9 +181,9 @@ Respond ONLY with a JSON array. No preamble, no markdown, no backticks. Just raw
 Make the names creative and fitting for ${selectedAnimal}. Keep meanings fun and brief.`;
 
     try {
-      const response = await fetch("https://api.anthropic.com/v1/messages", {
+      const response = await fetch("/api/claude", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "x-api-key": ANTHROPIC_KEY, "anthropic-version": "2023-06-01" },
+        headers: { "Content-Type": "application/json", },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
           max_tokens: 1000,
