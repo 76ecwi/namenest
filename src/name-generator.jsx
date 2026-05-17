@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 
-
 // FREE tier limits
 const FREE_DAILY_LIMIT = 3;
 const FREE_MAX_NAMES = 6;
@@ -183,7 +182,7 @@ Make the names creative and fitting for ${selectedAnimal}. Keep meanings fun and
     try {
       const response = await fetch("/api/claude", {
         method: "POST",
-        headers: { "Content-Type": "application/json", },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           model: "claude-sonnet-4-20250514",
           max_tokens: 1000,
